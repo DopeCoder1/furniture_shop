@@ -1,0 +1,20 @@
+{% extends 'core/index.html' %}
+
+{% block sc %}
+
+     <div class="row">
+            <div class="col-md-12 cart_info">
+                    <div class="successful-order text-center">
+                        <h3 class="page-header">Спасибо за заказ!</h3>
+                    </div>
+                    <div class="ordered-info">
+                        <h5>Номер Заказа ID: <span>{{ order.id }}</span></h5>
+                        <h5>Фио Заказчика: <span>{{ order.name }} {{ order.customer.last_name }}</span></h5>
+                        <h5>Телефон: <span>{{ order.phone }}</span></h5>
+                        <h5>Почта: <span>{{ order.email }}</span></h5>
+                        <h5>Пользыватель: <span>{{ order.customer }}</span></h5>
+                    </div>
+            </div>
+        </div>
+
+{% endblock%}

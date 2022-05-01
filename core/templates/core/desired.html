@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'core/styles/all.css' %}">
+    <title>DiDi | {{title}}</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header_mini_nav">
+            <div class="mini_nav_wrapper">
+                <nav class="mini_navigation">
+                    <ul class="mini_nav_list">
+                        <li class="mini_nav_links"><a href="{% url 'home' %}">Главная</a></li>
+                        <li class="mini_nav_links"><a href="{% url 'account' %}">Личный кабинет</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <article class="desired">
+            <div class="desired_wrapper">
+                <ul class="desired_list">
+                    <li>
+                        <div class="desired_book">
+                            <img src="{% static 'core/images/maksF_mini.png' %}" alt="book" class="desired_book_img">
+                            <p class="desired_book_title">М. Фрай | Наваждения</p>
+                        </div>
+                        <div class="action_btn_counter">
+                            <span class="desired_book_counter">
+                                <button class="desired_counter_btn">+</button>
+                                <p class="desired_counter_sum">Кол-во: 1 | 2500тг</p>
+                            </span>
+                            <span class="action_btns">
+                                <button class="desired_remove_btn">Удалить</button>
+                                <button class="desired_buy_btn">Купить</button>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="desired_book">
+                            <img src="{% static 'core/images/genius_mini.png' %}" alt="book" class="desired_book_img">
+                            <p class="desired_book_title">Д. Глик | Гений</p>
+                        </div>
+                        <div class="action_btn_counter">
+                            <span class="desired_book_counter">
+                                <button class="desired_counter_btn">+</button>
+                                <p class="desired_counter_sum">Кол-во: 1 | 2500тг</p>
+                            </span>
+                            <span class="action_btns">
+                                <button class="desired_remove_btn">Удалить</button>
+                                <button class="desired_buy_btn">Купить</button>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="desired_book">
+                            <img src="{% static 'core/images/feiman_mini.png' %}" alt="book" class="desired_book_img">
+                            <p class="desired_book_title">Р. Фейман | Вы конечено, шутите</p>
+                        </div>
+                        <div class="action_btn_counter">
+                            <span class="desired_book_counter">
+                                <button class="desired_counter_btn">+</button>
+                                <p class="desired_counter_sum">Кол-во: 1 | 2500тг</p>
+                            </span>
+                            <span class="action_btns">
+                                <button class="desired_remove_btn">Удалить</button>
+                                <button class="desired_buy_btn">Купить</button>
+                            </span>
+                        </div>
+                    </li>
+                
+                </ul>
+            </div>
+        </article>
+       
+    </div>
+    
+</body>
+</html>

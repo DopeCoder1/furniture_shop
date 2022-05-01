@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="{% static 'core/check/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="title">
+      <h2>Оформление заказа</h2>
+  </div>
+<div class="d-flex">
+  <form enctype="multipart/form-data" action="" method="post">
+      {% csrf_token %}
+    <label>
+      <span class="fname">Имя <span class="required">*</span></span>
+        {{ form.name }}
+    </label>
+       <label>
+      <span class="fname">Телефона <span class="required">*</span></span>
+        {{ form.phone }}
+    </label>
+    <label>
+      <span class="lname">Почта <span class="required">*</span></span>
+      {{ form.email }}
+    </label>
+    <label>
+      <span>Адрес</span>
+      {{ form.address }}
+    </label>
+    <label>
+      <span>ИИН<span class="required">*</span></span>
+      {{ form.account_no }}
+    </label>
+    <label>
+        <span>Номер счёта<span class="required">*</span></span>
+      {{ form.bank_no }}
+    </label>
+       <button  type="submit">Оформить</button>
+  </form>
+ <!-- Yorder -->
+ </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

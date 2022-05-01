@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V8</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'core/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'core/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form method="post" enctype="multipart/form-data" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+                    {% csrf_token %}
+					<span class="login100-form-title">
+						Registration
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form.first_name}}
+						<span class="focus-input100"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form.last_name }}
+						<span class="focus-input100"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form.email }}
+						<span class="focus-input100"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form.username }}
+						<span class="focus-input100"></span>
+					</div>
+
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form2.address }}
+						<span class="focus-input100"></span>
+					</div>
+
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form2.photo }}
+						<span class="focus-input100"></span>
+					</div>
+
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form2.iin }}
+						<span class="focus-input100"></span>
+					</div>
+
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form2.bank_iin }}
+						<span class="focus-input100"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+						{{ form.password }}
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Регистрация
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'core/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'core/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'core/js/main2.js' %}"></script>
+
+</body>
+</html>

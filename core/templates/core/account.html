@@ -1,0 +1,39 @@
+{% extends 'core/index.html' %}
+
+{% block sc %}
+
+     <div class="row">
+            <div class="col-md-12 cart_info">
+                    <div class="successful-order text-center">
+                        <h3 class="page-header">Личный кабинет</h3>
+                    </div>
+                    <div class="ordered-info">
+                        <h5>ФИО: <span>{{ users.user.first_name }} {{ users.user.last_name }}</span></h5>
+                        <h5>ПОЧТА: <span>{{ users.user.email }}</span></h5>
+                        <h5>АДРЕС: <span>{{ users.address }}</span></h5>
+                    </div>
+                <div class="successful-order text-center">
+                        <h3 class="page-header">История Заказов</h3>
+                    </div>
+                {% for j in order_item %}
+                    <div class="ordered-info">
+                        <h5>Номер Заказа: <span>{{ j.order.id }}</span></h5>
+                        <h5>Товар: <span>{{ j.furniture }}</span></h5>
+                        <h5>Цена: <span>{{ j.price }}KZT</span></h5>
+                        <h5>Количество: <span>{{ j.quantity }}</span></h5>
+                        <h5>Адрес: <span>{{ j.order.address }}</span></h5>
+                        <h5>ИНН: <span>{{ j.order.account_no }}</span></h5>
+                        <h5>Номер Счёта: <span>{{ j.order.bank_no }}</span></h5>
+                        <h5>Статус: {% if j.order.status == True %}</h5>
+                        <h5><span>Подтвержден</span></h5>
+                            {% else %}
+                        <h5><span>В процессе</span></h5>
+                        {% endif %}
+
+<br>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock%}
